@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Procarga10</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+	
+
+</head>
+
+<body>
+
+
+	<div style="font-family: Cabin", class="be-white">
+		<%= render partial: "partials/navigation" %>
+
+		<% if notice %>
+		<script>swal({  title: "<%= notice %>", type:"success", timer: 3000,   showConfirmButton: false });</script>
+
+		<% end %>
+		<% if alert %>
+		<script>swal({   title: "<%= alert %>",   timer: 4000, type: "warning",  showConfirmButton: false });</script>
+
+		<% end %>
+		
+		<br><br>
+			<%= yield %>
+		
+
+	</div>
+
+</body>
+</html>

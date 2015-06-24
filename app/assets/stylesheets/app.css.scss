@@ -1,0 +1,83 @@
+
+.be-procargaimg{
+	background-image: url(asset-path('panoramic-full.jpg'))
+}
+.be-procargabann{
+	background-image: url(asset-path('panoramic-full-blue-banner.jpg'))
+}
+.be-procargaintense{
+	background-image: url(asset-path('panoramic-intense.jpg'))
+}
+.be-white{
+	color: white;
+
+}
+.centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.shadowcarga
+{
+	-webkit-box-shadow: 4px 4px 7px 0px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    4px 4px 7px 0px rgba(50, 50, 50, 1);
+	box-shadow:         4px 4px 7px 0px rgba(50, 50, 50, 1);
+}
+.shadowtextcarga
+{
+	text-shadow: 1px 1px 6px #1F0505;
+}
+.line-separator{
+
+	height:1px;
+
+	background:#E8E8DC;
+
+	border-bottom:1px solid #E8E8DC;
+
+}
+
+.button-proca {
+	background-color:transparent;
+	border:3px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow: 1px 1px 6px #1F0505;
+}
+.button-proca:hover {
+	background-color:#A69E9D;
+	opacity: 0.8;
+}
+.button-proca:active {
+	position:relative;
+	top:1px;
+}
+
+.element-changecolor {
+	width: 100%;
+	height: 100%;
+	animation: pulse 10s ;
+
+}
+
+.move-rigth{
+	display: block;
+	float: right;
+}
+.be-transparent{
+
+	background-color: transparent;
+
+}
+.be-colortrans{
+	background-color: rgba(0, 40, 94, 0.2);
+}
+
+
+

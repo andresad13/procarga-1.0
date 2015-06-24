@@ -1,0 +1,51 @@
+<div class="centered be-procargaintense" style="width:100%; height:100%;"> 
+  <br><br>
+  <center>
+    <div class="centered shadowtextcarga be-colortrans animated fadeIn " style="width:50%; height:80%;">
+      <div  class="centered shadowtextcarga " style="width:90%; height:90%;">
+
+        <h2><%= current_user.email%></h2>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, :class => 'form-control' %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :password %> <i>(dejar en blanco si no desea cambiarlo)</i><br />
+          <%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation,'confirmar password' %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :current_password, 'password actual' %> <i>(necesitamos su contraseña actual para confirmar los cambios.)</i><br />
+          <%= f.password_field :current_password, autocomplete: "off", :class => 'form-control' %>
+        </div>
+        <br>
+
+        <div class="actions">
+          <%= f.submit "Update", :class => 'button-proca' %>
+        </div>
+        <% end %>
+
+        <br>
+
+        <p>no eres feliz? <%= button_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-danger' %></p>
+
+        <%= link_to "Back", :back %>
+      </div>
+    </div>
+    <ul></ul>
+  </center>
+</div>  
