@@ -45,3 +45,8 @@ gem 'devise'
 gem 'sweet-alert'
 #awesome font, iconos y utiles
 gem 'font-awesome-sass'
+
+group :production do
+	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
+end
